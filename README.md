@@ -71,11 +71,11 @@
 ## Tool
 ---
 **App 기준** 
-BE: Nest.js
-FE: Flutter + 관리자 웹 (Vue.js)
-DB: MySql
-형상 관리 툴 : Git
-Tool: Docker / VisualStudio Code
+BE: Nest.js<br/>
+FE: Flutter + 관리자 웹 (Vue.js)<br/>
+DB: MySql<br/>
+형상 관리 툴 : Git<br/>
+Tool: Docker / VisualStudio Code<br/>
 
 ## 기능 및 DB
 ---
