@@ -63,3 +63,107 @@
 
 ## 백엔드 SPEC
 ### 백엔드 패키지 구조
+
+---
+
+# 3. 클라이밍 앱 정리
+
+## Tool
+---
+**App 기준** 
+BE: Nest.js
+FE: Flutter + 관리자 웹 (Vue.js)
+DB: MySql
+형상 관리 툴 : Git
+Tool: Docker / VisualStudio Code
+
+## 기능 및 DB
+---
+### 1. 회원 (JWT Token 형식으로 개발)
+- 회원 가입
+- 게스트 회원
+---
+
+**dbo.Member - 회원**
+| MemberNo | bigint | 회원 번호 |
+| --- | --- | --- |
+| MemID | varchar(20) | 회원명 |
+| Birth | varchar(20) | 생년월일 |
+| Email | varchar(50) | 이메일 |
+| Phone | varchar(12) | 휴대폰번호 |
+| RegDate | datetime | 등록일 |
+
+---
+
+**dbo.MemberProfile - 회원 프로필**
+| MemberNo | bigint |  |
+| --- | --- | --- |
+| MemID | varchar(20) |  |
+| ProfileText | varchar(300) | 대화명 |
+| Img | varchar(500) | 프로필 이미지 |
+
+---
+
+**dbo.GuestMember - 게스트 회원 // 추가 논의 필요**
+| GuestNo | bigint | 게스트 번호 |
+| --- | --- | --- |
+|  |  |  |
+|  |  |  |
+
+---
+
+**dbo.Message - 프로필 통해 연락 처리 기능**
+| MessageNo | bigint |  |
+| --- | --- | --- |
+| FromMemNo | bigint | 메시지 발송자 |
+| FromMemID | varchar(20) | // 데이터 많아질 것 우려하여 따로 아이디는 그냥 저장 |
+| ToMemNo | bigint | 메시지 수신자 |
+| ToMemID | varchar(20) | 메신지 수신자 아이디 |
+| Text | varchar(200) |  |
+| RegDate | datetime |  |
+
+### 2. 횟수권
+
+- 횟수권 DB
+
+### 3. 암장 난이도
+
+- 
+
+### 4. 암장 지도
+
+- 암장 DB
+
+dbo.Climb - 암장 
+
+| ClimbNo | int |
+| --- | --- |
+| ClimbName | varchar(50) |
+| Phone | varchar(20) |
+| LocationCode | int |
+| RegDate | datetime |
+|  |  |
+
+dbo.Region - 지역 저장용 
+
+| LocationCode | int |  |
+| --- | --- | --- |
+| Region | varchar(20) | 지역(경기/충북/…) |
+| RegDate | datetime |  |
+| AdminID | varchar(20) |  |
+
+### 5. 예약 프로필
+- 클라이밍장 예약 방문 프로필 거는 기능
+
+**dbo.ReceptionProfile - 예약방문 프로필 DB**
+| ClimbNo | bigint |  |
+| --- | --- | --- |
+| MemNo | bigint |  |
+| ReceptYear | int | 예약할 년도 |
+| ReceptMonth | int | 예약할 월 |
+| ReceptDay | int | 예약할 일 |
+| ReceptHour | int | 예약할 시간 |
+| ReceptMin | int | 예약할 분 |
+| RegDate | datetime |  |
+
+### 6. 게시판
