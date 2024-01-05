@@ -95,6 +95,15 @@ Tool: Docker / VisualStudio Code<br/>
 
 ---
 
+**dbo.OauthRefreshToken - Refresh 토큰 저장**
+| --- | --- | --- |
+| idx | bigint | 인덱스 |
+| mem_id | varchar(20) | 회원명 |
+| member_no | bigint | 회원번호 |
+| refresh_token | mediumtext | Refresh Token 값|
+
+---
+
 **dbo.MemberProfile - 회원 프로필**
 | MemberNo | bigint |  |
 | --- | --- | --- |
