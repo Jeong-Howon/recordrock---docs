@@ -6,9 +6,15 @@
 
 # 2. 개발가이드
 <br>
+
 ## Restful
 - Restful한 url 설계를 위해 url 주소에는 무조건 명사/복수형이 올 수 있도록 할것
-- ``` GET /users
+- ```
+  GET  /users => 모든 유저 정보 조회
+  POST /users => users.push(data), 데이터 insert
+  GET  /users/:id => 아이디로 특정 user 한명 조회
+  ```
+
 ## Git 규칙
 ### Git Flow 
 - master : 배포 버전
