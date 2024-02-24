@@ -6,7 +6,9 @@
 
 # 2. 개발가이드
 <br>
-
+## Restful
+- Restful한 url 설계를 위해 url 주소에는 무조건 명사/복수형이 올 수 있도록 할것
+- ``` GET /users
 ## Git 규칙
 ### Git Flow 
 - master : 배포 버전
